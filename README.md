@@ -1,70 +1,153 @@
-# Getting Started with Create React App
+## Project Schedule
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
 
-## Available Scripts
+You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
-In the project directory, you can run:
+|  Day | Deliverable | Status
+|---|---| ---|
+|Day 1| Wireframes / Project Description                | 
+|Day 2| useState        | 
+|Day 3| Core Application Structure (HTML, CSS, etc.)    | 
+|Day 4| MVP & Bug Fixes                                 | 
+|Day 5| Final Touches                                   | 
+|Day 6| Present                                         | 
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Description
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The purpose of this project is to create a portofolio showcasing my skills in HTML, CSS, and JavaScript/JQuery. HTML will allow me to add and structure content. Colors, background images, fonts, and positioning will be modified using CSS. JavaScript and JQuery will be the metaphorical "bells and whistle" of the website. They'll add transitions and transformations, making my website more dynamic and eye-interactive.
 
-### `npm test`
+## Wireframes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Include images of wireframe with a description of the specific wireframe.   
 
-### `npm run build`
+- [Mobile/Tablet/Desktop](https://ibb.co/dMhPRmF)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Time/Priority Matrix 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Link](https://ibb.co/HDCZgbd)
 
-### `npm run eject`
+ - Total Time: `25.5 hours`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### MVP/PostMVP - 5min
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### MVP (examples)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Layout
+- Background Image
+- About Me and Contents are filled, while Projects has placeholder projects/images.
+- Responsive Design with Tablet and PC sizing
 
-## Learn More
+#### PostMVP 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Extra Images
+- Image Carousel
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Functional Components
 
-### Code Splitting
+Based on the initial logic defined in the previous sections try and breakdown the logic further into smaller components.  Try and capture what logic would need to be defined if the game was broken down into the following categories.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Time frames are also key in the development cycle.  You have limited time to code all phases of the portfolio. Your estimates can then be used to evalute possibilities based on time needed and the actual time you have before the portfolio must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
 
-### Analyzing the Bundle Size
+#### MVP
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+| Component | Priority | Estimated Time | Actual Time |
+| --- | :---: |  :---: | :---: | 
 
-### Making a Progressive Web App
+| Setting useState    | H | 5hr   |  |
+| Components          | H | 1.5hr |  |
+| Input Form          | M | 2hr   |  |  
+| Button              | H | 2hr   |  | 
+| Debugging           | M | 3hr   |  |
+| CSS                 | M | 3hr   |  |
+| Griding             | M | 1hr   |  |
+| Responsive Tablet   | L | 3hr   |  |
+| Responsive PC       | L | 5hr   |  |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+| Total | H | 34.5hrs| hrs |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### PostMVP
+| Component | Priority | Estimated Time | Actual Time |
+| --- | :---: |  :---: | :---: | 
 
-### `npm run build` fails to minify
+| Images                 | L | 1hr | hr |
+| Interactive Nav Bar    | M | 2hr | hr |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| Total | H | 6hrs| hrs |
+
+
+##### Requirements
+
+#### Your website must:
+- Be a working, interactive, React application.
+- Include data from a third-party API.
+    - TRY OUT your API in the browser by making an fetch request before you get too emotionally invested in it, to make sure it works the way you think it does...**YOU ARE REQUIRED TO SHOW US YOU CAN RECEIVE THE DATA FOR YOUR PROPOSAL**
+- Include React Router with at least 2 routes
+- Have at least 5 separate components, using a readable file structure.
+- Be built using Create React App.
+- Built mobile first 
+- Implement responsive design using flexbox, grid, or another css framework.
+- Use React Hooks
+- Be deployed on github pages https://github.com/gitname/react-gh-pages
+
+### Ad
+
+#### Your code must:
+
+- Be properly indented.  
+- Be written with semantic, camelCase JavaScript variable names.  
+- Be written with kebab-case (dashes) CSS class names.  
+- Contain no `console.log()` or commented out code in final version.  
+- Use only React for DOM manipulation.  
+- No pre-loaded `create-react-app` files or code.
+
+## Necessary Deliverables
+
+#### Commits
+- Repo must contain frequent commits (min 15+) dating back to the beginning of the project.
+
+#### A Professional README
+- Refer to this [blog](https://medium.com/@meakaakka/a-beginners-guide-to-writing-a-kickass-readme-7ac01da88ab3) as a great resource on how to create a readme.
+
+#### A Completed Project Proposal:
+- Refer to the [project worksheet](/project-worksheet.md) file in this repo for structuring your Proposal.
+
+#### For the project:
+- A git repository hosted on GitHub, with a link to your hosted project, and **frequent** commits dating back to the very beginning of the project (YOUR APP SHOULD BE LOCATED IN A SEPARATE STANDING REPO. DO NOT build your app in this repository. YOU MUST initiate a new repo on your GitHub account.) 
+
+<hr>
+
+## Tips
+
+Read the following articles posted by previous students into how they planned and organized their thoughts into building a unit project.
+- [REACT.js : A Haunting by Sami Schonefeld
+](https://medium.com/@samischonefeld/react-js-a-haunting-cd2aaf15541f)
+- [how-i-built-my-first-obama-themed-javascript-game by Sarah Currey
+](https://medium.com/@sarah.currey/how-i-built-my-first-obama-themed-javascript-game-b06f7c62af4c)
+
+-Commit early, commit often:   Don't be afraid to break something because you can always go back in time to a previous version.
+
+
+## Check out these awesome websites for inspiration
+- https://www.foursquare.com
+- https://www.nike.com
+- https://www.airbnb.com
+- https://www.stripe.com
+- https://www.etsy.com
+- https://www.moma.org
+- https://www.nytimes.com
+- https://www.mint.com
+- https://www.popeyes.com
+- https://www.bk.com/menu/burgers
+
+## A Note on Plagiarism
+
+Take a moment to re-familiarize yourself with the [plagiarism policy](https://git.generalassemb.ly/seir-1118/Administrative/blob/master/plagiarism.md), specifically on using work you find online and on work you do with other students.
+
