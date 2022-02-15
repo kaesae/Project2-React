@@ -3,58 +3,69 @@ import { Link, Route, Routes } from 'react-router-dom'
 import { react, useEffect, useState } from 'react'
 
 function App() {
-  const [statsList, setStatsList] = useState([])
-  const [selectedCountry, setSelectedCountry] = useState ({})
+  const [displayCases, setDisplayCases] = useState([])
+  const [displayVaccinated, setDisplayVaccinated] = useState([])
 
-  const url = "https://covid-api.mmediagroup.fr/v1/vaccines"
+  // const [displayDeaths, setDisplayDeaths] = useState([])
 
-  //gives me Cuba's and All, need to make it a changeable value later
-  const {Cuba, All: { administered }} = statsList
-  console.log(Cuba)
 
-// console.log(statsList)
 
-  const getStatsList = () => {
-    fetch(url)
+  // const [selectedCountry, setSelectedCountry] = useState ({})
+
+  const casesUrl = "https://covid-api.mmediagroup.fr/v1/cases?country=France"
+  const vaccinatedUrl = "https://covid-api.mmediagroup.fr/v1/vaccines?country=France"
+  
+  // const deathsUrl = "https://covid-api.mmediagroup.fr/v1/history?country=Germany&status=deaths"
+
+
+
+
+
+  const getCases = () => {
+    fetch(casesUrl)
       .then ((response) => response.json())
-      .then ((data) => setStatsList(data))
+      .then ((data) => setDisplayCases(data))
       .catch (() => console.log("you're infected"))
   }
 
   useEffect (() => {
-    getStatsList()
+    getCases()
   }, [])
 
-  // console.log(statsList)
 
-  //
+  const getVaccinated = () => {
+    fetch(vaccinatedUrl)
+      .then ((response) => response.json())
+      .then ((data) => setDisplayVaccinated(data))
+      .catch (() => console.log("you're unvaccinated"))
+  }
+
+  useEffect (() => {
+    getVaccinated()
+  }, [])
+
+  // const getDeaths = () => {
+  //   fetch(deathsUrl)
+  //     .then ((response) => response.json())
+  //     .then ((data) => setDisplayDeaths(data))
+  //     .catch (() => console.log("you're dead"))
+  // }
+
+  // useEffect (() => {
+  //   getDeaths()
+  // }, [])
+
 
   // const getSelectedCountry = () = {
-    
   // }
 
   // const handleStats = () => {
   //   setSelectedCountry();
   // }
 
-  // const displayStats = statsList.map((administered, population, index) => {
-  //   return (
-  //     <div key={index}>
-  //       <li>{administered}</li>
-  //       <li>{population}</li>
-  //     </div>
-  //   )
-  // });
 
 
-  // const displayStatsList = () => {
-  //   const result = []
-  //   for (const country in statsList) {
-  //     const covidDetails = {country: country["All"]["administered"]}
-  //     result.push(<div>{covidDetails}</div>)
-  //   }
-  //   return result
-  // };
+
 
   // Handle Change Location
   // const handleLocationChange = (location) => {
@@ -63,23 +74,55 @@ function App() {
 
   return (
     <div className="App">
-      
-      <nav>
-          <h1 className=''>Covid-19 Stats</h1>
-          <h3 className='cases'><Link to='/something'>Cases</Link></h3>
-          <h2 className='cases'></h2>
-          <h3 className='vaccinated'><Link to='/something'>Vaccinated</Link></h3>
-          <h2 className='vaccinated'></h2>
-          <h3 className='deaths'><Link to='/something'>Deaths</Link></h3>
-          <h2 className='deaths'></h2>
-      </nav>
-
+      <header>
+        <img src='https://tn.com.ar/resizer/aEeDGyIIhQse4rMvChv_RkbELsk=/1023x0/smart/filters:quality(60)/cloudfront-us-east-1.images.arcpublishing.com/artear/P3GH4U63HNAIRBLZMIPWZPZZEE.jpg'></img>
+      </header>
       <main>
-        <div>Change Locations</div>
+        <h2 className='Location'>Location: {' '}
+          {displayCases.All 
+          ? displayCases.All.country 
+        : ''}
+        </h2>
+
+        <div className='CovidStats'>
+        <h2 className='Covid'>Covid-19 Stats</h2>
+        
+        <div className='Cases'>
+          <h3>Cases</h3>
+          <h6>
+            {displayCases.All 
+            ? displayCases.All.confirmed 
+            : ''}
+          </h6>
+        </div>
+
+        <div className='Vaccinated'>
+          <h3>Vaccinated</h3>
+          <h6>
+            {displayVaccinated.All 
+            ? displayVaccinated.All.administered 
+            : ''}
+          </h6>
+        </div>
+
+        <div className='Deaths'>
+          <h3>Deaths</h3>
+          <h6>
+            {displayCases.All  
+            ? displayCases.All.deaths 
+            : ''}
+          </h6>
+        </div>
+        </div>
+
         <Routes>
           <Route />
         </Routes>
       </main>
+
+      <footer>
+        <div>Change Locations Form</div>
+      </footer>
     </div>
   );
 }
