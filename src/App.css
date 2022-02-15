@@ -32,6 +32,11 @@
         text-align: center;
     }
 
+    .Covid {
+        background-color: rgb(141, 141, 141);
+        margin: -5px 0 0 0;
+    }
+
     .Cases {
         padding: 5px 0 5px 0;
         text-align: center;

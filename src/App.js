@@ -1,21 +1,17 @@
 import './App.css';
 import { Link, Route, Routes } from 'react-router-dom'
 import { react, useEffect, useState } from 'react'
+import ChangeCountryForm from './Components/Form';
 
 function App() {
   const [displayCases, setDisplayCases] = useState([])
   const [displayVaccinated, setDisplayVaccinated] = useState([])
 
-  // const [displayDeaths, setDisplayDeaths] = useState([])
 
 
-
-  // const [selectedCountry, setSelectedCountry] = useState ({})
-
-  const casesUrl = "https://covid-api.mmediagroup.fr/v1/cases?country=France"
-  const vaccinatedUrl = "https://covid-api.mmediagroup.fr/v1/vaccines?country=France"
+  const casesUrl = "https://covid-api.mmediagroup.fr/v1/cases?country=US"
+  const vaccinatedUrl = "https://covid-api.mmediagroup.fr/v1/vaccines?country=US"
   
-  // const deathsUrl = "https://covid-api.mmediagroup.fr/v1/history?country=Germany&status=deaths"
 
 
 
@@ -68,9 +64,9 @@ function App() {
 
 
   // Handle Change Location
-  // const handleLocationChange = (location) => {
-
-  // }
+  const handleChangeCountry = () => {
+    
+  }
 
   return (
     <div className="App">
@@ -85,7 +81,7 @@ function App() {
         </h2>
 
         <div className='CovidStats'>
-        <h2 className='Covid'>Covid-19 Stats</h2>
+        <h2 className='Covid'>Covid-19 Statistics</h2>
         
         <div className='Cases'>
           <h3>Cases</h3>
@@ -121,7 +117,7 @@ function App() {
       </main>
 
       <footer>
-        <div>Change Locations Form</div>
+        <ChangeCountryForm />
       </footer>
     </div>
   );
