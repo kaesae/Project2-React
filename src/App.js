@@ -14,9 +14,6 @@ function App() {
   
 
 
-
-
-
   const getCases = () => {
     fetch(casesUrl)
       .then ((response) => response.json())
@@ -60,18 +57,18 @@ function App() {
   // }
 
 // from Dog API example, w5d1
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const url = `${urlBase}${value}/list`;
-    console.log(value)
-    fetch(url)
-    .then((response) => response.json())
-      .then((data) => setBreeds(data.message))
-  };
-  
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   const url = `${urlBase}${value}/list`;
+  //   console.log(value)
+  //   fetch(url)
+  //   .then((response) => response.json())
+  //     .then((data) => setBreeds(data.message))
+  // };
+
+  // const handleChange = (event) => {
+  //   setValue(event.target.value);
+  // };
 
 
 
@@ -129,7 +126,7 @@ function App() {
       </main>
 
       <footer>
-        <ChangeCountryForm randomButton={randomButton}/>
+        <ChangeCountryForm setDisplayCases={setDisplayCases}/>
       </footer>
     </div>
   );
