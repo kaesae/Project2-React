@@ -4,16 +4,18 @@ import { react, useEffect, useState } from 'react'
 import ChangeCountryForm from './Components/Form';
 
 function App() {
+  //States
   const [displayCases, setDisplayCases] = useState([])
   const [displayVaccinated, setDisplayVaccinated] = useState([])
+  const [value, setValue] = useState("");
 
 
-
+  //API URLs
   const casesUrl = "https://covid-api.mmediagroup.fr/v1/cases?country=US"
   const vaccinatedUrl = "https://covid-api.mmediagroup.fr/v1/vaccines?country=US"
   
 
-
+  //Mounting / setting States of Cases and Vaccinated
   const getCases = () => {
     fetch(casesUrl)
       .then ((response) => response.json())
@@ -24,7 +26,6 @@ function App() {
   useEffect (() => {
     getCases()
   }, [])
-
 
   const getVaccinated = () => {
     fetch(vaccinatedUrl)
@@ -37,45 +38,43 @@ function App() {
     getVaccinated()
   }, [])
 
-  // const getDeaths = () => {
-  //   fetch(deathsUrl)
-  //     .then ((response) => response.json())
-  //     .then ((data) => setDisplayDeaths(data))
-  //     .catch (() => console.log("you're dead"))
-  // }
 
-  // useEffect (() => {
-  //   getDeaths()
-  // }, [])
+  //Form Change/Submit Functions/Events
+  const handleChange = (event) => {
+    setValue(event.target.value);
+    };
 
+    const newGetCases = () => {
+      fetch(casesUrl)
+        .then ((response) => response.json())
+        .then ((data) => setDisplayCases(data))
+        .catch (() => console.log("you're infected"))
+    }
 
-  // const getSelectedCountry = () = {
-  // }
+    const newGetVaccinated = () => {
+      fetch(vaccinatedUrl)
+        .then ((response) => response.json())
+        .then ((data) => setDisplayVaccinated(data))
+        .catch (() => console.log("you're unvaccinated"))
+    }
 
-  // const handleStats = () => {
-  //   setSelectedCountry();
-  // }
+  const handleSubmit = (event) => {
+      event.preventDefault();
+    //set url with interpolation
+    //pass VALUE into URL
+    const newCasesUrl = `https://covid-api.mmediagroup.fr/v1/cases?country=${value}`
+    const newVaccinatedUrl = `https://covid-api.mmediagroup.fr/v1/vaccines?country=${value}`
+  
+    //make function run getVaccinated or a new version of it
+    fetch(newCasesUrl)
+    .then((response) => response.json())
+    .then((data) => setDisplayCases(data))
+    console.log(newCasesUrl)
+    fetch(newVaccinatedUrl)
+    .then((response) => response.json())
+    .then((data) => setDisplayVaccinated(data))
+  };
 
-// from Dog API example, w5d1
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   const url = `${urlBase}${value}/list`;
-  //   console.log(value)
-  //   fetch(url)
-  //   .then((response) => response.json())
-  //     .then((data) => setBreeds(data.message))
-  // };
-
-  // const handleChange = (event) => {
-  //   setValue(event.target.value);
-  // };
-
-
-
-  // Handle Change Location
-  const handleChangeCountry = () => {
-    
-  }
 
   return (
     <div className="App">
@@ -126,7 +125,11 @@ function App() {
       </main>
 
       <footer>
-        <ChangeCountryForm setDisplayCases={setDisplayCases}/>
+        {/* <ChangeCountryForm setDisplayCases={setDisplayCases}/> */}
+        <form onSubmit={handleSubmit}>
+            <input type="text" value={value} placeholder="Search by country" onChange={handleChange} />
+            <input type="submit" value="Submit" />
+        </form>
       </footer>
     </div>
   );

@@ -23,11 +23,16 @@ const ChangeCountryForm = (props) => {
     // };
 
 
+    // create a form that passes the value inputted
+    // into the API's new URL
+    // which then fetches the Data
+    // and updates the state
+
     const handleChange = (event) => {
     setValue(event.target.value);
     };
 
-    //what do we change props to?
+    //what do we change props to? maybe nothing
     const handleSubmit = (event) => {
         event.preventDefault();
         props.somethingELSEhere(value);
