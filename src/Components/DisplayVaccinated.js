@@ -1,6 +1,4 @@
 
-
-
 const DisplayVaccinated = ({displayVaccinated}) => {
     return(
         <div className='Vaccinated'>

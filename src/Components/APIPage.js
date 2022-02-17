@@ -1,9 +1,7 @@
 
-
-
 const APIPage = () => {
     return(
-        <div>
+        <div className="APIPage">
             I'm the API Page
         </div>
     )

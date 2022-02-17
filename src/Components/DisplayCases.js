@@ -1,6 +1,4 @@
 
-
-
 const DisplayCases = ({displayCases}) => {
     return(
         <div className='Cases'>

@@ -1,10 +1,8 @@
-
-
 const Footer = () => {
     return(
-    <footer>
-    <div>Coded with love by Kae</div>
-  </footer>
+        <footer>
+            <div>Coded with love by Kae</div>
+        </footer>
     )
 }
 

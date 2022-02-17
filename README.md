@@ -3,10 +3,10 @@
 |  Day | Deliverable | Status
 |---|---| ---|
 
-|Day 1| Wireframes / Project Description                | Incomplete
-|Day 2| useStates                                       | Incomplete
-|Day 3| Core Application Structure (HTML, CSS, etc.)    | Incomplete
-|Day 4| MVP & Bug Fixes                                 | Incomplete
+|Day 1| Wireframes / Project Description                | Complete
+|Day 2| useStates                                       | Complete
+|Day 3| Core Application Structure (HTML, CSS, etc.)    | Complete
+|Day 4| MVP & Bug Fixes                                 | Complete
 |Day 5| Final Touches                                   | Incomplete
 |Day 6| Present                                         | Incomplete
 
@@ -91,17 +91,9 @@ The purpose of this project is to showcase my knowledge of requesting data from 
 
 #### Your code must:
 
-- Be properly indented.  
-- Be written with semantic, camelCase JavaScript variable names.  
-- Be written with kebab-case (dashes) CSS class names.  
-- Contain no `console.log()` or commented out code in final version.  
-- Use only React for DOM manipulation.  
+
 - No pre-loaded `create-react-app` files or code.
 
-## Necessary Deliverables
-
-#### Commits
-- Repo must contain frequent commits (min 15+) dating back to the beginning of the project.
 
 
 #### For the project:
