@@ -1,6 +1,11 @@
 import './App.css';
 import { Link, Route, Routes } from 'react-router-dom'
 import { react, useEffect, useState } from 'react'
+import Footer from './Components/Footer';
+import Header from './Components/Header';
+import DisplayCases from './Components/DisplayCases';
+import DisplayVaccinated from './Components/DisplayVaccinated';
+import DisplayDeaths from './Components/DIsplayDeaths';
 // import ChangeCountryForm from './Components/Form';
 
 function App() {
@@ -78,9 +83,8 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <img src='https://tn.com.ar/resizer/aEeDGyIIhQse4rMvChv_RkbELsk=/1023x0/smart/filters:quality(60)/cloudfront-us-east-1.images.arcpublishing.com/artear/P3GH4U63HNAIRBLZMIPWZPZZEE.jpg'></img>
-      </header>
+      <Header />
+
       <main>
         <h2 className='Location'>Location: {' '}
           {displayCases.All 
@@ -91,45 +95,25 @@ function App() {
         <div className='CovidStats'>
         <h2 className='Covid'>Covid-19 Statistics</h2>
         
-        <div className='Cases'>
-          <h3>Cases</h3>
-          <h6>
-            {displayCases.All 
-            ? displayCases.All.confirmed 
-            : ''}
-          </h6>
-        </div>
+          <DisplayCases displayCases={displayCases}/>
 
-        <div className='Vaccinated'>
-          <h3>Vaccinated</h3>
-          <h6>
-            {displayVaccinated.All 
-            ? displayVaccinated.All.administered 
-            : ''}
-          </h6>
-        </div>
+          <DisplayVaccinated displayVaccinated={displayVaccinated} />
 
-        <div className='Deaths'>
-          <h3>Deaths</h3>
-          <h6>
-            {displayCases.All  
-            ? displayCases.All.deaths 
-            : ''}
-          </h6>
-        </div>
-        </div>
-
-        <Routes>
-          <Route />
-        </Routes>
-      </main>
-
-      <footer>
-        <form onSubmit={handleSubmit}>
+            <DisplayDeaths displayCases={displayCases} />
+          <form onSubmit={handleSubmit}>
             <input type="text" value={value} placeholder="Search by country" onChange={handleChange} />
             <input type="submit" value="Submit" />
         </form>
-      </footer>
+
+        </div>
+
+        <Routes>
+          <Route></Route>
+        </Routes>
+      </main>
+
+      <Footer />
+        
     </div>
   );
 }
