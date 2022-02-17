@@ -18,7 +18,6 @@ function App() {
       </nav>
 
       <Header />
-      <div>This is the home page</div>
 
         <Routes>
           <Route path="/covid" element={<Main />} />

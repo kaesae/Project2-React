@@ -48,11 +48,11 @@ The purpose of this project is to showcase my knowledge of requesting data from 
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
 
-| Setting useStates   | H | 10hr  |  |
-| Components          | H | 20hr  |  |
-| Input Form          | M | 2hr   |  |  
-| Button              | H | 2hr   |  | 
-| Debugging           | M | 15hr  |  |
+| Setting useStates   | H | 10hr  | 10hr |
+| Components          | H | 20hr  | 4hr  |
+| Input Form          | M | 2hr   | 5hr  |  
+| Button              | H | 2hr   | .5hr | 
+| Debugging           | M | 15hr  | 20hr |
 | CSS                 | M | 3hr   |  |
 | Gridding            | M | 1hr   |  |
 | Interactive Nav Bar | M | 2hr   |  |
@@ -76,15 +76,6 @@ The purpose of this project is to showcase my knowledge of requesting data from 
 ##### Requirements
 
 #### Your website must:
-- Be a working, interactive, React application. ✅
-- Include data from a third-party API. ✅
-    - TRY OUT your API in the browser by making an fetch request before you get too emotionally invested in it, to make sure it works the way you think it does...**YOU ARE REQUIRED TO SHOW US YOU CAN RECEIVE THE DATA FOR YOUR PROPOSAL**
-- Include React Router with at least 2 routes✅
-- Have at least 5 separate components, using a readable file structure.✅
-- Be built using Create React App.✅
-- Built mobile first ✅
-- Implement responsive design using flexbox, grid, or another css framework. ✅
-- Use React Hooks✅
 - Be deployed on github pages https://github.com/gitname/react-gh-pages
 
 ### Ad

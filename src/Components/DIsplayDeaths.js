@@ -2,7 +2,7 @@
 const DisplayDeaths = ({displayCases}) => {
     return(
       <div className='Deaths'>
-        <h3>Deaths</h3>
+        <h3>☠️Deaths</h3>
         <h6>
           {displayCases.All  
           ? displayCases.All.deaths 

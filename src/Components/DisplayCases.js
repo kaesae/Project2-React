@@ -2,7 +2,7 @@
 const DisplayCases = ({displayCases}) => {
     return(
         <div className='Cases'>
-          <h3>Cases</h3>
+          <h3>📈Cases</h3>
           <h6>
             {displayCases.All 
             ? displayCases.All.confirmed 

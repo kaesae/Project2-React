@@ -56,18 +56,18 @@ const Main = () => {
     const newVaccinatedUrl = `https://covid-api.mmediagroup.fr/v1/vaccines?country=${value}`
   
     fetch(newCasesUrl)
-    .then((response) => response.json())
-    .then((data) => setDisplayCases(data))
-    console.log(newCasesUrl)
+        .then((response) => response.json())
+        .then((data) => setDisplayCases(data))
+
     fetch(newVaccinatedUrl)
-    .then((response) => response.json())
-    .then((data) => setDisplayVaccinated(data))
+        .then((response) => response.json())
+        .then((data) => setDisplayVaccinated(data))
   };
 
 
     return(
         <main>
-        <h2 className='Location'>Location: {' '}
+        <h2 className='Location'>📍Location: {' '}
           {displayCases.All 
           ? displayCases.All.country 
         : ''}
