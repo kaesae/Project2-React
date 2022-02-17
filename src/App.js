@@ -1,7 +1,7 @@
 import './App.css';
 import { Link, Route, Routes } from 'react-router-dom'
 import { react, useEffect, useState } from 'react'
-import ChangeCountryForm from './Components/Form';
+// import ChangeCountryForm from './Components/Form';
 
 function App() {
   //States
@@ -125,7 +125,6 @@ function App() {
       </main>
 
       <footer>
-        {/* <ChangeCountryForm setDisplayCases={setDisplayCases}/> */}
         <form onSubmit={handleSubmit}>
             <input type="text" value={value} placeholder="Search by country" onChange={handleChange} />
             <input type="submit" value="Submit" />
@@ -136,11 +135,3 @@ function App() {
 }
 
 export default App;
-
-// Create useState and set it to all the countries
-
-// set useState to display information of Cuba
-
-// Add form to make it change countries
-
-// divy into components
