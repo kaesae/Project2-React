@@ -1,6 +1,6 @@
 ## Project Schedule
 
-|  Day | Deliverable | Status
+|  Day | Deliverable | Status |
 |---|---| ---|
 
 |Day 1| Wireframes / Project Description                | Complete
@@ -21,7 +21,7 @@ The purpose of this project is to showcase my knowledge of requesting data from 
 - Desktop: https://ibb.co/1dYKjd9
 
 ## React Architecture
--Architecture: https://ibb.co/s5N3svK
+- Architecture: https://ibb.co/s5N3svK
 
 ## Time/Priority Matrix 
  - Total Time: 60 hrs
@@ -30,32 +30,32 @@ The purpose of this project is to showcase my knowledge of requesting data from 
 #### MVP
 
 - Requesting API
--  Components
-- orm
+- 5 Components
+    - Main
+    - Footer
+    - Header
+    - API Page
+    - Bio Page
+- Form
 
 
 #### PostMVP 
 - Image API for country
-- hange CSS to add image
-
-## Functional Components
-
-#### MVP
-
+- Change CSS to add image
 
 #### MVP
 
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
 
-| Setting useStates   | H | 10hr  | 10hr |
-| Components          | H | 20hr  | 4hr  |
-| Input Form          | M | 2hr   | 5hr  |  
-| Button              | H | 2hr   | .5hr | 
-| Debugging           | M | 15hr  | 20hr |
-| CSS                 | M | 3hr   |  |
-| Gridding            | M | 1hr   |  |
-| Interactive Nav Bar | M | 2hr   |  |
+| Setting useStates   | H | 10hr  | 10 hr |
+| Components          | H | 20hr  | 4 hr  |
+| Input Form          | M | 2hr   | 5 hr  |  
+| Button              | H | 2hr   | .5 hr | 
+| Debugging           | M | 15hr  | 20 hr |
+| CSS                 | M | 3hr   | 3 hr |
+| Gridding            | M | 1hr   | 1 hr |
+| Interactive Nav Bar | M | 2hr   | 1 hr |
 | Responsive Tablet   | L | 3hr   |  |
 | Responsive PC       | L | 3hr   |  |
 
@@ -78,16 +78,32 @@ The purpose of this project is to showcase my knowledge of requesting data from 
 #### Your website must:
 - Be deployed on github pages https://github.com/gitname/react-gh-pages
 
-### Ad
+### Code Snippet
+ - I'm very proud of this this part of the code. This is the main API functionality that allows for a user to pass a value using a form into the API URL, runs the handleSubmit function and fetches the data with the new API URL, and sets the the useState.
 
-#### Your code must:
+**Code**
 
+                 <form onSubmit={handleSubmit}>
+                    <input type="text" value={value} placeholder="Search by country" onChange={handleChange} />
+                    <input type="submit" value="Submit" />
+                </form>
 
-- No pre-loaded `create-react-app` files or code.
+  const handleChange = (event) => {
+    setValue(event.target.value);
+    };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const newCasesUrl = `https://covid-api.mmediagroup.fr/v1/cases?country=${value}`
+    const newVaccinatedUrl = `https://covid-api.mmediagroup.fr/v1/vaccines?country=${value}`
+  
+    fetch(newCasesUrl)
+        .then((response) => response.json())
+        .then((data) => setDisplayCases(data))
 
+    fetch(newVaccinatedUrl)
+        .then((response) => response.json())
+        .then((data) => setDisplayVaccinated(data))
+  };
 
-#### For the project:
-- A git repository hosted on GitHub, with a link to your hosted project, and **frequent** commits dating back to the very beginning of the project (YOUR APP SHOULD BE LOCATED IN A SEPARATE STANDING REPO. DO NOT build your app in this repository. YOU MUST initiate a new repo on your GitHub account.) 
-
-<hr>
+**End Code**

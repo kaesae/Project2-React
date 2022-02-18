@@ -1,7 +1,7 @@
 import DisplayCases from './DisplayCases';
 import DisplayVaccinated from './DisplayVaccinated';
 import DisplayDeaths from './DisplayDeaths';
-import { react, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const Main = () => {
   const [displayCases, setDisplayCases] = useState([])
@@ -35,18 +35,6 @@ const Main = () => {
   const handleChange = (event) => {
     setValue(event.target.value);
     };
-
-  const newGetCases = () => {
-    fetch(casesUrl)
-    .then ((response) => response.json())
-    .then ((data) => setDisplayCases(data))
-    }
-
-  const newGetVaccinated = () => {
-    fetch(vaccinatedUrl)
-    .then ((response) => response.json())
-    .then ((data) => setDisplayVaccinated(data))
-    }
 
   const handleSubmit = (event) => {
     event.preventDefault();
