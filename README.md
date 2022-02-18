@@ -1,7 +1,6 @@
 ## Project Schedule
 
 |  Day | Deliverable | Status |
-|---|---| ---|
 
 |Day 1| Wireframes / Project Description                | Complete
 |Day 2| useStates                                       | Complete
@@ -38,7 +37,6 @@ The purpose of this project is to showcase my knowledge of requesting data from 
     - Bio Page
 - Form
 
-
 #### PostMVP 
 - Image API for country
 - Change CSS to add image
@@ -46,7 +44,6 @@ The purpose of this project is to showcase my knowledge of requesting data from 
 #### MVP
 
 | Component | Priority | Estimated Time | Actual Time |
-| --- | :---: |  :---: | :---: | 
 
 | Setting useStates   | H | 10hr  | 10 hr |
 | Components          | H | 20hr  | 4 hr  |
@@ -59,9 +56,6 @@ The purpose of this project is to showcase my knowledge of requesting data from 
 | Responsive Tablet   | L | 3hr   |  |
 | Responsive PC       | L | 3hr   |  |
 
-
-
-
 | Total | H | 57hrs| hrs |
 
 #### PostMVP
@@ -73,10 +67,6 @@ The purpose of this project is to showcase my knowledge of requesting data from 
 | Total | H | 3 hrs| hrs |
 
 
-##### Requirements
-
-#### Your website must:
-- Be deployed on github pages https://github.com/gitname/react-gh-pages
 
 ### Code Snippet
  - I'm very proud of this this part of the code. This is the main API functionality that allows for a user to pass a value using a form into the API URL, runs the handleSubmit function and fetches the data with the new API URL, and sets the the useState.
