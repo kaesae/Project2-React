@@ -16,9 +16,9 @@
 The purpose of this project is to showcase my knowledge of requesting data from an API, React, React-DOM, useState, Route, Link, Links, and Component usage and management. This project display Covid cases, vaccinations, and deaths in different countries around the world. As of today, 2/14/22, the covid pandemic is nearing it's 2-year anniversary, so this project is very relevant to today. 
 
 ## Wireframes
--Mobile: https://ibb.co/HFDHv7W
--Tablet: https://ibb.co/QCx9pgv
--Desktop: https://ibb.co/1dYKjd9
+- Mobile: https://ibb.co/HFDHv7W
+- Tablet: https://ibb.co/QCx9pgv
+- Desktop: https://ibb.co/1dYKjd9
 
 ## React Architecture
 -Architecture: https://ibb.co/s5N3svK
@@ -29,14 +29,14 @@ The purpose of this project is to showcase my knowledge of requesting data from 
 ### MVP/PostMVP - 5min
 #### MVP
 
--Requesting API
--5 Components
--Form
+- Requesting API
+-  Components
+- orm
 
 
 #### PostMVP 
--Image API for country
--Change CSS to add image
+- Image API for country
+- hange CSS to add image
 
 ## Functional Components
 

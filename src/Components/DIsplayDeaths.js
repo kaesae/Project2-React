@@ -2,8 +2,8 @@
 const DisplayDeaths = ({displayCases}) => {
     return(
       <div className='Deaths'>
-        <h3>☠️Deaths</h3>
-        <h6>
+        <h3 className="DisplayDeathsTitle">☠️Deaths</h3>
+        <h6 className="DisplayDeaths">
           {displayCases.All  
           ? displayCases.All.deaths 
           : ''}

@@ -8,10 +8,8 @@ const Main = () => {
   const [displayVaccinated, setDisplayVaccinated] = useState([])
   const [value, setValue] = useState("");
 
-
   const casesUrl = "https://covid-api.mmediagroup.fr/v1/cases?country=US"
   const vaccinatedUrl = "https://covid-api.mmediagroup.fr/v1/vaccines?country=US"
-  
 
   const getCases = () => {
     fetch(casesUrl)
@@ -38,16 +36,16 @@ const Main = () => {
     setValue(event.target.value);
     };
 
-    const newGetCases = () => {
-      fetch(casesUrl)
-        .then ((response) => response.json())
-        .then ((data) => setDisplayCases(data))
+  const newGetCases = () => {
+    fetch(casesUrl)
+    .then ((response) => response.json())
+    .then ((data) => setDisplayCases(data))
     }
 
-    const newGetVaccinated = () => {
-      fetch(vaccinatedUrl)
-        .then ((response) => response.json())
-        .then ((data) => setDisplayVaccinated(data))
+  const newGetVaccinated = () => {
+    fetch(vaccinatedUrl)
+    .then ((response) => response.json())
+    .then ((data) => setDisplayVaccinated(data))
     }
 
   const handleSubmit = (event) => {
@@ -67,26 +65,24 @@ const Main = () => {
 
     return(
         <main>
-        <h2 className='Location'>📍Location: {' '}
-          {displayCases.All 
-          ? displayCases.All.country 
-        : ''}
-        </h2>
+            <h2 className='Location'>📍Location: {' '}
+                {displayCases.All 
+                ? displayCases.All.country 
+                : ''}
+            </h2>
 
-        <div className='CovidStats'>
-        <h2 className='Covid'>Covid-19 Statistics</h2>
-        
-          <DisplayCases displayCases={displayCases}/>
+            <div className='CovidStats'>
+                <h2 className='Covid'>Covid-19 Statistics</h2>
+                
+                <DisplayCases displayCases={displayCases} />
+                <DisplayVaccinated displayVaccinated={displayVaccinated} />
+                <DisplayDeaths displayCases={displayCases} />
 
-          <DisplayVaccinated displayVaccinated={displayVaccinated} />
-
-          <DisplayDeaths displayCases={displayCases} />
-          <form onSubmit={handleSubmit}>
-            <input type="text" value={value} placeholder="Search by country" onChange={handleChange} />
-            <input type="submit" value="Submit" />
-        </form>
-
-        </div>
+                <form onSubmit={handleSubmit}>
+                    <input type="text" value={value} placeholder="Search by country" onChange={handleChange} />
+                    <input type="submit" value="Submit" />
+                </form>
+            </div>
         </main>
     )
 }

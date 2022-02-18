@@ -1,6 +1,5 @@
 import './App.css';
 import { Link, Route, Routes } from 'react-router-dom'
-import { react, useEffect, useState } from 'react'
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import BioPage from './Components/BioPage';
@@ -19,15 +18,13 @@ function App() {
 
       <Header />
 
-        <Routes>
-          <Route path="/covid" element={<Main />} />
-          <Route path="/bio" element={<BioPage />} />
-          <Route path='/api' element={<APIPage />} />
-        </Routes>
+      <Routes>
+        <Route path='/covid' element={<Main />} />
+        <Route path="/bio" element={<BioPage />} />
+        <Route path='/api' element={<APIPage />} />
+      </Routes>
  
-
-
-        <Footer />
+      <Footer />
     </div>
   );
 }

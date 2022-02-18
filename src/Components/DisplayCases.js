@@ -2,8 +2,8 @@
 const DisplayCases = ({displayCases}) => {
     return(
         <div className='Cases'>
-          <h3>📈Cases</h3>
-          <h6>
+          <h3 className="DisplayCasesTitle">📈Cases</h3>
+          <h6 className="DisplayCases">
             {displayCases.All 
             ? displayCases.All.confirmed 
             : ''}

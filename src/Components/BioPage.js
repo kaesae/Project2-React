@@ -18,7 +18,7 @@ const BioPage = () => {
                 I, myself, transformed into the social butterfly I am today as my friends 
                 put it, changed careers, and I've started feeling rooted, making San Francisco
                 my home base. So despite all that has happened, I feel as though I've changed
-                for the better
+                for the better.
                 </p>
             </div>
         </div>
