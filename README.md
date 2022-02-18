@@ -69,7 +69,7 @@ The purpose of this project is to showcase my knowledge of requesting data from 
 
 
 ### Code Snippet
- - I'm very proud of this this part of the code. This is the main API functionality that allows for a user to pass a value using a form into the API URL, runs the handleSubmit function and fetches the data with the new API URL, and sets the the useState.
+ - I'm very proud of this part of the code, since it's the main API functionality that allows for a user to pass a value using a form into the API URL, runs the handleSubmit function and fetches the data with the new API URL, and sets the the useState.
 
 **Code**
 

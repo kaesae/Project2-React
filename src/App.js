@@ -1,4 +1,6 @@
-import './App.css';
+import './CSS/Mobile.css';
+import './CSS/Tablet.css';
+import './CSS/PC.css';
 import { Link, Route, Routes } from 'react-router-dom'
 import Footer from './Components/Footer';
 import Header from './Components/Header';
@@ -10,6 +12,7 @@ function App() {
 
   return (
     <div className="App">
+
       <nav>
         <p><Link to='/bio'>Meet the Creator</Link></p>
         <p><Link to='/api'>API Info</Link></p>
