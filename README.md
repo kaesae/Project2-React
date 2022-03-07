@@ -1,13 +1,13 @@
 ## Project Schedule
 
 |  Day | Deliverable | Status |
-
-|Day 1| Wireframes / Project Description                | Complete
-|Day 2| useStates                                       | Complete
-|Day 3| Core Application Structure (HTML, CSS, etc.)    | Complete
-|Day 4| MVP & Bug Fixes                                 | Complete
-|Day 5| Final Touches                                   | Incomplete
-|Day 6| Present                                         | Incomplete
+|---|---|---|
+|Day 1| Wireframes / Project Description                | Complete |
+|Day 2| useStates                                       | Complete |
+|Day 3| Core Application Structure (HTML, CSS, etc.)    | Complete |
+|Day 4| MVP & Bug Fixes                                 | Complete |
+|Day 5| Final Touches                                   | Complete |
+|Day 6| Present                                         | Complete |
 
 
 ## Project Description
@@ -61,23 +61,23 @@ The purpose of this project is to showcase my knowledge of requesting data from 
 #### PostMVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-
 | Images API                | L | 3hr | hr |
-
-| Total | H | 3 hrs| hrs |
+| Total |  | 3 hrs| hrs |
 
 
 
 ### Code Snippet
  - I'm very proud of this part of the code, since it's the main API functionality that allows for a user to pass a value using a form into the API URL, runs the handleSubmit function and fetches the data with the new API URL, and sets the the useState.
 
-**Code**
 
+```html
                  <form onSubmit={handleSubmit}>
                     <input type="text" value={value} placeholder="Search by country" onChange={handleChange} />
                     <input type="submit" value="Submit" />
                 </form>
 
+```
+```js
   const handleChange = (event) => {
     setValue(event.target.value);
     };
@@ -95,5 +95,5 @@ The purpose of this project is to showcase my knowledge of requesting data from 
         .then((response) => response.json())
         .then((data) => setDisplayVaccinated(data))
   };
+  ```
 
-**End Code**

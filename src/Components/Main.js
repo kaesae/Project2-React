@@ -52,26 +52,26 @@ const Main = () => {
 
 
     return(
-        <main>
-            <h2 className='Location'>📍Location: {' '}
-                {displayCases.All 
-                ? displayCases.All.country 
-                : ''}
-            </h2>
+      <main>
+        <h2 className='Location'>📍Location: {' '}
+            {displayCases.All 
+            ? displayCases.All.country 
+            : ''}
+        </h2>
 
-            <div className='CovidStats'>
-                <h2 className='Covid'>Covid-19 Statistics</h2>
-                
-                <DisplayCases displayCases={displayCases} />
-                <DisplayVaccinated displayVaccinated={displayVaccinated} />
-                <DisplayDeaths displayCases={displayCases} />
+        <div className='CovidStats'>
+            <h2 className='Covid'>Covid-19 Statistics</h2>
+            
+            <DisplayCases displayCases={displayCases} />
+            <DisplayVaccinated displayVaccinated={displayVaccinated} />
+            <DisplayDeaths displayCases={displayCases} />
 
-                <form onSubmit={handleSubmit}>
-                    <input type="text" value={value} placeholder="Search by country" onChange={handleChange} />
-                    <input type="submit" value="Submit" />
-                </form>
-            </div>
-        </main>
+            <form onSubmit={handleSubmit}>
+                <input type="text" value={value} placeholder="Enter Zip Code" onChange={handleChange} />
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+      </main>
     )
 }
 

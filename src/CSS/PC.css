@@ -3,7 +3,7 @@
     .App {
         display: grid;
         grid-template-columns: .3fr 1fr .3fr;
-        grid-template-rows: .25fr .5fr .1fr;
+        grid-template-rows: 120px .5fr .1fr;
     }
 
     nav {
@@ -14,6 +14,7 @@
 
     header {
         grid-column: 2/3;
+        grid-row: 2/3;
     }
 
     img {
@@ -52,7 +53,7 @@
     }
 
     .CovidStats {
-        background: linear-gradient(to top, transparent, rgb(190, 0, 0) 75%);
+        background: linear-gradient(to top, transparent, rgb(179, 0, 0) 75%);
         grid-column: 2/3;
         grid-row: 2/3;
         padding: 5px 0 5px 0;
@@ -60,7 +61,7 @@
     }
 
     .Covid {
-        background-color: rgb(49, 1, 1);
+        background-color: rgb(119, 0, 0);
         margin: -5px 0 0 0;
     }
 

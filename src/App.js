@@ -14,7 +14,7 @@ function App() {
     <div className="App">
 
       <nav>
-        <p><Link to='/bio'>Meet the Creator</Link></p>
+        <p><button><Link to='/bio'>Meet the Creator</Link></button></p>
         <p><Link to='/api'>API Info</Link></p>
         <p><Link to='/covid'>Covid Stats</Link></p>
       </nav>
