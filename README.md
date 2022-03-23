@@ -25,9 +25,8 @@ The purpose of this project is to showcase my knowledge of requesting data from 
 ## Time/Priority Matrix 
  - Total Time: 60 hrs
 
-### MVP/PostMVP - 5min
-#### MVP
 
+#### MVP
 - Requesting API
 - 5 Components
     - Main
@@ -37,14 +36,16 @@ The purpose of this project is to showcase my knowledge of requesting data from 
     - Bio Page
 - Form
 
-#### PostMVP 
+# PostMVP 
 - Image API for country
 - Change CSS to add image
 
-#### MVP
+
+
+# MVP
 
 | Component | Priority | Estimated Time | Actual Time |
-
+| ------ | ----- | ----- | ---- |
 | Setting useStates   | H | 10hr  | 10 hr |
 | Components          | H | 20hr  | 4 hr  |
 | Input Form          | M | 2hr   | 5 hr  |  
@@ -53,12 +54,13 @@ The purpose of this project is to showcase my knowledge of requesting data from 
 | CSS                 | M | 3hr   | 3 hr |
 | Gridding            | M | 1hr   | 1 hr |
 | Interactive Nav Bar | M | 2hr   | 1 hr |
-| Responsive Tablet   | L | 3hr   |  |
-| Responsive PC       | L | 3hr   |  |
+| Responsive Tablet   | L | 3hr   | 1 hr |
+| Responsive PC       | L | 3hr   | 1 hr |
+| Total               | H | 57hrs | hrs |
 
-| Total | H | 57hrs| hrs |
 
-#### PostMVP
+
+# PostMVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
 | Images API                | L | 3hr | hr |
@@ -67,7 +69,7 @@ The purpose of this project is to showcase my knowledge of requesting data from 
 
 
 ### Code Snippet
- - I'm very proud of this part of the code, since it's the main API functionality that allows for a user to pass a value using a form into the API URL, runs the handleSubmit function and fetches the data with the new API URL, and sets the the useState.
+ - I'm very proud of this part of the code, since it's the main API functionality that allows for a user to pass a value using a form into the API URL, runs the handleSubmit function and fetches the data with the new API URL, and sets the useState.
 
 
 ```html
